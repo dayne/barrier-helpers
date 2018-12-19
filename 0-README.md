@@ -13,15 +13,6 @@ I made a `barrierc-trust.sh` script to do this.  Just pass in `server:port` as f
 barrierc-trust.sh server-name:24800
 ```
 
-```
-$HOME/.config/barrier
-└── SSL
-    ├── Barrier.pem             # client's certificates
-    └── Fingerprints
-        ├── Local.txt           # client's certificate fingerprint
-        └── TrustedServers.txt  # fingerprint of the server 
- ```
-
 I'm also keen having ability to be seeing messages/attaching directly so I created a tmux launch script `barrierc-tmux.sh` to auto run `barrier-client.sh` in a tmux session on login.  
 
 The barrierc-tmux.sh is autolaunched by my i3 by having the following line in my `.config/i3/config`
