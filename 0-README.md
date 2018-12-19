@@ -6,7 +6,12 @@ BARRIER_CLIENT_NAME=${HOSTNAME}
 BARRIER_SERVER=gilbert.lan:24800
 ```
 
-This expect the client to already be configured to trust the server.  That trust is managed by the `~/.config/barrier/SSL/Fingerprints/TrustedServers.txt` that has the finger print of the server.
+This expects the client to already be configured to trust the server.  That trust is managed by the `~/.local/share/barrier/SSL/Fingerprints/TrustedServers.txt` which should have the fingerprint of the server.  
+
+I made a `barrierc-trust.sh` script to do this.  Just pass in `server:port` as first paramter like so:
+```
+barrierc-trust.sh server-name:24800
+```
 
 ```
 $HOME/.config/barrier
