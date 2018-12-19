@@ -1,5 +1,5 @@
 
-I like a simple barrier run line so I created `barrier-client.sh` to launch my barrier client.  It reads from a `.config/barrier.cfg` file to determine the client name and server to connect to.
+I like a simple barrier run line so I created `barrier-client.sh` to launch my barrier client.  It reads from a `.config/barrier.cfg` file I created to determine the client name and server to connect to.
 
 `cat ~/.config/barrier.cfg`
 ```
