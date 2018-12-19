@@ -1,5 +1,4 @@
-
-I like a simple barrier run line so I created `barrier-client.sh` to launch my barrier client.  It reads from a `.config/barrier.cfg` file I created to determine the client name and server to connect to.
+I try to avoid using the GUI to configure/run barrier so I created a simple bash script `barrier-client.sh` to launch my barrier client.  It reads from a `.config/barrier.cfg` file I created to determine the client name and server to connect to.
 
 `cat ~/.config/barrier.cfg`
 ```
@@ -17,3 +16,10 @@ $HOME/.config/barrier
         ├── Local.txt           # client's certificate fingerprint
         └── TrustedServers.txt  # fingerprint of the server 
  ```
+
+I'm also keen having ability to be seeing messages/attaching directly so I created a tmux launch script `barrierc-tmux.sh` to auto run `barrier-client.sh` in a tmux session on login.  
+
+The barrierc-tmux.sh is autolaunched by my i3 by having the following line in my `.config/i3/config`
+```
+exec $HOME/.bin/barrierc-tmux.sh &
+```
